@@ -1,4 +1,4 @@
-<div class="card container mt-5 mb-5" >
+<!-- <div class="card container mt-5 mb-5 w-50" >
   <div class="card-body">
     <form>
       <div class="mb-3">
@@ -11,7 +11,30 @@
       </div>
       <div class="mb-3">
         <label for="exampleFormControlTextarea1">Contenido</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <textarea  class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">Enviar</button>
+    </form>
+  </div>
+</div>
+
+ -->
+
+
+ <div class="card container mt-5 mb-5 w-50" >
+  <div class="card-body">
+    <form (submit)="sendEmail($event)">
+      <div class="mb-3">
+        <label class="form-label">Direccion correo de contacto</label>
+        <input name="user_email" type="email" class="form-control" aria-describedby="emailHelp" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Asunto</label>
+        <input name="asunto" type="text" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1">Contenido</label>
+        <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
       </div>
       <button type="submit" class="btn btn-success">Enviar</button>
     </form>
