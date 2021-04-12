@@ -10,6 +10,15 @@ import { ClientesComponent } from './components/clientes/clientes.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ChimeneasComponent } from './components/productos/chimeneas/chimeneas.component';
+import { CascadasComponent } from './components/productos/cascadas/cascadas.component';
+import { YeseriaComponent } from './components/productos/yeseria/yeseria.component';
+import { CeramicaComponent } from './components/productos/ceramica/ceramica.component';
+import { PrefabricadosComponent } from './components/productos/prefabricados/prefabricados.component';
+import { OtrosComponent } from './components/productos/otros/otros.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+
+
 
 @NgModule({
   declarations: [
@@ -20,7 +29,14 @@ import { FooterComponent } from './components/footer/footer.component';
     ClientesComponent,
     ContactoComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ChimeneasComponent,
+    CascadasComponent,
+    YeseriaComponent,
+    CeramicaComponent,
+    PrefabricadosComponent,
+    OtrosComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

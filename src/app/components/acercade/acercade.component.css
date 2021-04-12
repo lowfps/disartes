@@ -1,20 +1,11 @@
 #textoPrincipal {
-  max-width: 92%;
-  position: relative;
-  left: 2%;
-  text-align: justify;
+  max-width: 100ch;
   color: #08103a;
-}
-
-.misionContainer{
-  margin-top: 5%;
-  font-size: 1.4rem;
   text-align: justify;
 }
 
-.visionContainer{
+#textoPrincipal p{
   margin-top: 5%;
   font-size: 1.4rem;
-  text-align: justify;
   margin-bottom: 10%;
 }

@@ -34,11 +34,9 @@
   margin-bottom: 8%;
 }
 
-#textoPrincipal{
-  max-width: 92%;
-  position: relative;
-  left: 2%;
-  text-align: justify;
-  color: #08103A;
-
+@media (max-width: 800px) {
+  .carousel-item img {
+    width: 320px;
+    height: 340px !important;
+  }
 }

@@ -11,7 +11,7 @@ footer.nb-footer .about {
   text-align: center;
 }
 footer.nb-footer .about p {
-  font-size: 13px;
+  font-size: 1.2rem;
   color: #999;
 
 }
@@ -51,5 +51,8 @@ footer.nb-footer .footer-info-single ul li a {
 }
 footer.nb-footer .footer-info-single ul li a:hover {
   color: #b78c33;
+}
+.desarroladoPor a{
+  color: #999;
 }
 
