@@ -18,9 +18,9 @@ const routes: Routes = [
   {path: 'acercade', component: AcercadeComponent},
   {path: 'productos', component: ProductosComponent, children:[
     {path: 'cascadas', component: CascadasComponent},
-    {path: 'ceramica', component: NotFoundComponent},
+    {path: 'ceramica', component: CeramicaComponent},
     {path: 'chimeneas', component: ChimeneasComponent},
-    {path: 'prefabricados', component: NotFoundComponent},
+    {path: 'prefabricados', component: PrefabricadosComponent},
     {path: 'yeseria', component: NotFoundComponent},
     {path: 'otros', component: OtrosComponent}
   ]},

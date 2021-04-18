@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+//Imagenes
+import { Foto } from "../../../models/foto.model";
+import { ARREGLO_CERAMICA } from "../../../mocks/foto.mock";
+
 @Component({
   selector: 'app-ceramica',
   templateUrl: './ceramica.component.html',
@@ -7,7 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CeramicaComponent implements OnInit {
 
-  constructor() { }
+  public miArreglo: Foto[]
+
+  constructor() { 
+    this.miArreglo = ARREGLO_CERAMICA;
+  }
 
   ngOnInit(): void {
   }
