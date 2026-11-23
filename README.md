@@ -1,10 +1,10 @@
 # Disartes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
+Website of DISARTES TUNJA. Angular 22 (originally generated with Angular CLI 10 and upgraded in November 2026). Requires Node.js 22.22+ or 24.15+.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm install` and then `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -12,16 +12,16 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build` to build the project for production. The build artifacts will be stored in the `dist/disartes/browser/` directory.
+
+## Deploy
+
+Upload the contents of `dist/disartes/browser/` to `public_html`, including the hidden `.htaccess` file (it comes from `src/.htaccess`). It forces HTTPS, serves `index.html` for the Angular routes and blocks PHP and other server-side scripts: the site does not use any.
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `ng test` to execute the unit tests via [Vitest](https://vitest.dev).
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

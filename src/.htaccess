@@ -1,0 +1,36 @@
+# DISARTES TUNJA: sitio Angular estático. No usa PHP ni ningún otro lenguaje de servidor.
+
+Options -Indexes
+DirectoryIndex index.html
+
+# 1. Bloquear cualquier script de servidor (PHP, CGI, etc.). Si alguien vuelve a
+#    subir un webshell, el servidor responde 403 en vez de ejecutarlo.
+<FilesMatch "\.(?i:php[0-9]?|phtml|phar|pht|phps|cgi|pl|py|sh|asp|aspx|jsp)$">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # El mismo bloqueo por dirección, incluido /archivo.php/otra/ruta
+  RewriteRule \.(php[0-9]?|phtml|phar|pht|phps|cgi|pl|py|sh|asp|aspx|jsp)(/|$) - [F,NC]
+
+  # 2. Forzar HTTPS, salvo las validaciones de AutoSSL en /.well-known/
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{REQUEST_URI} !^/\.well-known/
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # 3. Rutas de Angular (/contacto, /productos/cascadas...): si no es un archivo
+  #    o una carpeta real, entregar index.html
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# 4. Que los navegadores siempre pidan el index.html más reciente
+<IfModule mod_headers.c>
+  <Files "index.html">
+    Header set Cache-Control "no-cache"
+  </Files>
+</IfModule>

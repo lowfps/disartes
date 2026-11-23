@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Hasta 2026 la página se mostraba en "quirks mode" por un error en index.html,
+   y en ese modo <body> ocupa toda la pantalla. Esto mantiene el pie de página
+   abajo (el contenedor .h-100 de app.component.html) ahora en modo estándar. */
+html,
+body {
+  height: 100%;
+}

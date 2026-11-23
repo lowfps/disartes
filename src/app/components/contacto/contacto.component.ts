@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 
 @Component({
-  selector: 'app-contacto',
-  templateUrl: './contacto.component.html',
-  styleUrls: ['./contacto.component.css'],
+    selector: 'app-contacto',
+    templateUrl: './contacto.component.html',
+    styleUrls: ['./contacto.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
+    standalone: false
 })
 export class ContactoComponent implements OnInit {
   constructor() {}
